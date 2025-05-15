@@ -1,0 +1,270 @@
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3d3838;
+  --accent-color: #2a302a;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --success-color: #4cc9f0;
+  --warning-color: #f72585;
+  --text-color: #2b2d42;
+  --text-light: #8d99ae;
+  --bg-color: #ffffff;
+  --card-bg: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  background-color: var(--dark-color);
+  margin: 0;
+  padding: 0 1em;
+  line-height: 1.6;
+  
+}
+
+/* Enlaces */
+a {
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+a:link {
+  color: var(--primary-color);
+}
+
+a:visited {
+  color: var(--accent-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+a.menu {
+  display: block;
+  padding: 0.6em 0.8em;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 18px;
+  text-align: center;
+  margin: 0.3em 0;
+  box-shadow: var(--shadow);
+}
+
+a.menu:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+
+}
+
+/* Párrafos */
+p {
+  margin: 0.8em 0;
+  padding: 1em;
+  border-left: 4px solid var(--primary-color);
+  border-radius: 0 8px 8px 0;
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+p:hover {
+  transform: translateX(4px);
+}
+
+p.otro {
+  border-left: 4px dotted var(--success-color);
+  background-color: rgba(76, 201, 240, 0.1);
+}
+
+/* Encabezado */
+header {
+  padding: 1.5em;
+  color: white;
+  font-weight: bold;
+  font-size: 1.6em;
+  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5em;
+      border-radius: 18px;
+
+}
+
+#titPral {
+  display: inline-block;
+  vertical-align: middle;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+/* Navegación */
+nav {
+  background-color: var(--text-color);
+  padding: 12px 20px;
+  margin-bottom: 2em;
+  box-shadow: var(--shadow);
+    border-radius: 18px;
+
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav li {
+  display: inline-block;
+  list-style: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 500;
+  font-family: 'Segoe UI', sans-serif;
+  transition: all 0.3s ease;
+}
+
+nav li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+/* Contenido principal */
+section {
+  float: left;
+  width: calc(100% - 400px);
+  margin: 0 20px 20px 0;
+  padding: 1.5em;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+section:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Barra lateral */
+aside {
+  float: right;
+  width: 250px;
+  margin: 0 0 20px 0;
+  padding: 1.5em;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--primary-color);
+}
+
+/* Pie de página */
+footer {
+  clear: both;
+  background: linear-gradient(135deg, var(--dark-color), #343a40);
+  color: white;
+  padding: 2em 0;
+  margin-top: 2em;
+    border-radius: 18px;
+
+}
+
+footer .contenedor {
+  padding: 1em;
+  text-align: center;
+}
+
+footer .nosotros {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+footer .nosotros h2 {
+  font-size: 1.4em;
+  margin-bottom: 1em;
+  color: white;
+}
+
+footer .nosotros p {
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.8);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+footer p.copyright {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 0.9em;
+  color: rgb(0, 0, 0);
+}
+
+/* Elementos multimedia */
+img,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+figure.logo {
+  display: inline;
+}
+
+img.logo {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s ease;
+}
+
+img.logo:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Responsivo */
+@media screen and (max-width: 800px) {
+  header {
+    font-size: 1.3em;
+    text-align: center;
+    padding: 1em;
+  }
+
+  nav {
+    text-align: center;
+  }
+
+  section,
+  aside {
+    float: none;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  nav li {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 15px;
+  }
+  
+  img.logo {
+    display: block;
+    margin: 0 auto 10px;
+  width: 60px;
+    height: 60px;
+  }
+  
+  #titPral {
+    display: block;
+  }
+}
